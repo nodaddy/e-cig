@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Signature</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      padding: 5px;
+    }
+    .profile-picture {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+    .social-icons {
+      font-size: 20px;
+      margin-right: 10px;
+      color: #333;
+    }
+    .banner {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td rowspan="4" style="vertical-align: top;">
+        <img src="{{photoURL}}" alt="Profile Picture" class="profile-picture">
+      </td>
+      <td>
+        <strong>{{firstName}} {{lastName}}</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>{{jobTitle}}</td>
+    </tr>
+    <tr>
+      <td>{{companyName}}</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="tel:{{phoneNumber}}">{{phoneNumber}}</a> | <a href="mailto:{{email}}">{{email}}</a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <a href="{{webSite}}" target="_blank">{{webSite}}</a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <a href="{{facebookURL}}" target="_blank" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+        <a href="{{twitterURL}}" target="_blank" class="social-icons"><i class="fab fa-twitter"></i></a>
+        <a href="{{linkedinURL}}" target="_blank" class="social-icons"><i class="fab fa-linkedin-in"></i></a>
+        <a href="{{youtubeURL}}" target="_blank" class="social-icons"><i class="fab fa-youtube"></i></a>
+        <a href="{{githubURL}}" target="_blank" class="social-icons"><i class="fab fa-github"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <img src="{{bannerURL1}}" alt="Banner 1" class="banner">
+        <img src="{{bannerURL2}}" alt="Banner 2" class="banner">
+        <img src="{{bannerURL3}}" alt="Banner 3" class="banner">
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
